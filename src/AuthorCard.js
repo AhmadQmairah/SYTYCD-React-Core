@@ -5,7 +5,7 @@ class AuthorCard extends Component {
   render() {
     const author = this.props.author;
     const authorName = `${author.first_name} ${author.last_name}`;
-
+    console.log(author);
     return (
       <div className="col-lg-4 col-md-6 col-12">
         <Link to={`/authors/${author.id}`} className="card">

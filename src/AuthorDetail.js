@@ -20,13 +20,13 @@ class AuthorDetail extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.match.params.authorID !== this.props.match.params.authorID) {
+    if (prevProps.match.params.ID !== this.props.match.params.ID) {
       this.getAuthor();
     }
   }
 
   getAuthor = async () => {
-    const authorID = this.props.match.params.authorID;
+    const authorID = this.props.match.params.ID;
     this.setState({ loading: true });
     try {
       const res = await instance.get(`/api/authors/${authorID}`);
